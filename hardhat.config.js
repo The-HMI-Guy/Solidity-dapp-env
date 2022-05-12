@@ -18,4 +18,15 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.8.4",
+  //Tells compiler to build the artifacts in our src directory
+  //Reason: React app cannot access anything outside, so it must exist inside the src directory
+  paths: {
+    artifacts: "./src/artifacts",
+  },
+  //MetaMask chainID issue. MetaMask recommends pointing to this.
+  networks: {
+    hardhat: {
+      chainId: 1337
+    },
+  },
 };

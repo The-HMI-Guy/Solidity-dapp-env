@@ -33,6 +33,18 @@ This project was built from the mentorship by Firebug509.
   - Enter all default settings
   - Original README.md had to be renamed to avoid conflict
 - Post install, replaced Hardhat's content and pasted original content.
+- Add the following code inside hardhat.config.js under solidity: "0.8.4",
+  - //Tells compiler to build the artifacts in our src directory
+    //Reason: React app cannot access anything outside, so it must exist inside the src directory
+    paths: {
+    artifacts: "./src/artifacts",
+    },
+    //MetaMask chainID issue. MetaMask recommends pointing to this.
+    networks: {
+    hardhat: {
+    chainId: 1337
+    },
+    },
 
 ## Technologies
 
