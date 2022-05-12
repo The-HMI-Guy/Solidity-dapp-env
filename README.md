@@ -45,6 +45,13 @@ This project was built from the mentorship by Firebug509.
     chainId: 1337
     },
     },
+- Run npx hardhat compile
+  - artifacts folder created in the src directory
+- Open new terminal and run cd app
+- Run npx hardhat node
+  - Local blockchain i.e. http://127.0.0.1:8545/
+- Switch MetaMask to LocalHost 8545 & import account using local node PK
+- ![MetaMask-Hardhat](https://user-images.githubusercontent.com/96752508/168085825-7963931a-867a-4fc7-99d9-0afdbc7fdd9d.png)
 
 ## Technologies
 
