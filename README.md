@@ -58,7 +58,9 @@ This project was built from the mentorship by Firebug509.
     - This deploys contract. To verify, switch back to the node terminal and check consol log or check MetaMask account, which should have a reduced amount of eth
 - Example on how to run test script to check contract test/functions
     - npx hardhat test 
-
+- Update app.js
+    - Open new terminal and run cd dapp/
+    - npm run start
 ## Technologies
 
 Project is created with:
