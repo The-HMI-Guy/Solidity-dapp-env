@@ -55,12 +55,17 @@ This project was built from the mentorship by Firebug509.
 - Leave node terminal running and switch back to the original terminal
 - Go to scripts and change original file name to deploy.js
 - Run npx hardhat run scripts/deploy.js --network localhost
-    - This deploys contract. To verify, switch back to the node terminal and check consol log or check MetaMask account, which should have a reduced amount of eth
+  - This deploys contract. To verify, switch back to the node terminal and check consol log or check MetaMask account, which should have a reduced amount of eth
 - Example on how to run test script to check contract test/functions
-    - npx hardhat test 
+  - npx hardhat test
 - Update app.js
-    - Open new terminal and run cd dapp/
-    - npm run start
+  - Open new terminal and run cd dapp/
+  - npm run start
+    - Simple UI to get the data and update the data
+- Inside the hardhat.config.js file, add Rinkeby network block of code
+  - Include Infura URL and test MetaMask PK
+- Run npx hardhat run scripts/deploy.js --network rinkeby
+
 ## Technologies
 
 Project is created with:
