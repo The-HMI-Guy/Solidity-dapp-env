@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState, useEffect} from "react"; //Import and use both functions for rendering
+import {ethers} from "ethers"; //Interacting with our contract
+import Greeter from "./artifacts/contracts/Greeter.sol/Greater.json"; //Contains ABI, which will instantiate and interact w/ our contract
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const [data, setData] = useState("");
+  const [contract, setContract] = useState();
 
-export default App;
+//Get our data from the contract
+const getData = async () => {
+  const data = await contract.greet();
+  setData(data);
+}
+  //Update our data in the contract
+  const UpdateData = () => {
+    const transaction = await contract.setGreeting(data);
+    await transaction.wait();
+    getData();
+  }
+}
