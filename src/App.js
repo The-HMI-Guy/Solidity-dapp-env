@@ -7,7 +7,32 @@ function App() {
   const [account, setAccount] = useState("");
   const [contract, setContract] = useState(null);
   const [tickets, setTickets] = useState([]);
+
+  const initConnection = async () => {
+    if(typeof window.ethereum !== "undefined") {
+        //Bring popup for MetaMask
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const newSigner = provider.getSigner();//Gives us the ability to perform request on the contract
+        setAccount(accounts[0]);
+        setContract(
+          new ethers.Contract(
+            "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9", //Contract address
+            Manager.abi, //Contract abi
+            newSigner //Signer from MetaMask account
+          )
+        );
+      } else {
+        console.log("Please install MetaMask.");
+      }
+  };
+  useEffect(() => {
+    initConnection();
+  }, []);
+  console.log(contract);
   return;
-  <div></div>;
+  <div>{account}</div>;
 }
 export default App;
