@@ -28,11 +28,11 @@ module.exports = {
     hardhat: {
       chainId: 1337,
     },
-    rinkeby: {
+    /*     rinkeby: {
       url: "https://rinkeby.infura.io/v3/2cf2bbd4068f45c08aeb064ce51468ed",
       accounts: [
         "9646bac3b8a9637b603c6f6af704b497c334b26f9a9050907c51100930f113bb",
       ],
-    },
+    }, */
   },
 };

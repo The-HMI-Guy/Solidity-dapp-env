@@ -65,6 +65,15 @@ This project was built from the mentorship by Firebug509.
 - Inside the hardhat.config.js file, add Rinkeby network block of code
   - Include Infura URL and test MetaMask PK
 - Run npx hardhat run scripts/deploy.js --network rinkeby
+- Part 1 New Terminal
+- Run npx hardhat clean
+- Run npx hardhat node
+- New Terminal
+    - Run npx hardhat run --network localhost scrip
+ts/deploy.js
+- Always run px hardhat compile after making a change to the contract
+    - Then run npx hardhat run --network localhost scrip
+ts/deploy.js
 
 ## Technologies
 
