@@ -74,6 +74,8 @@ ts/deploy.js
 - Always run px hardhat compile after making a change to the contract
     - Then run npx hardhat run --network localhost scrip
 ts/deploy.js
+- Working on manager-test.js
+    - Run npx hardhat test
 
 ## Technologies
 
