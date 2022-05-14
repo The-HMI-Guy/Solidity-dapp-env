@@ -70,16 +70,31 @@ This project was built from the mentorship by Firebug509.
 - Run npx hardhat node
 - New Terminal - Run npx hardhat run --network localhost scrip
   ts/deploy.js
-- Always run npx hardhat compile after making a change to the contract (best practice) - Then run npx hardhat test - Finally, run npx hardhat run --network localhost scrip
-  ts/deploy.js
-- Working on manager-test.js
+- Always run
 
 ```sh
- node index.js
-
+ npx hardhat compile
 ```
 
-    - Run npx hardhat test
+- after making a change to the contract (best practice)
+- Then run
+
+```sh
+npx hardhat test
+```
+
+- Finally, run
+
+```sh
+npx hardhat run --network localhost scripts/deploy.js
+```
+
+- Working on manager-test.js
+- Run
+
+```sh
+ npx hardhat test
+```
 
 ## Technologies
 
