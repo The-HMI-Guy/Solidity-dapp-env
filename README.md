@@ -27,22 +27,23 @@ This project was built from the mentorship by Firebug509.
   - Run
     ```sh
     node -v
-
-````
-- Run
+    ```
 
 ```sh
 npx create-react-app dapp
-````
+```
 
 - If you run into issues about the verison being behind, run
+
   ```sh
   npm uninstall -g create-react-app && npm i -g npm@latest && npm cache clean -f
+  ```
 
-````
 - Run
   ```sh
-cd dapp
+  cd dapp
+  ```
+
 ````
 
 - Run
@@ -50,7 +51,7 @@ cd dapp
   npm install ethers hardhat @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers
   ```
 
-````
+
 - npx hardhat
   - Enter all default settings
   - Original README.md had to be renamed to avoid conflict
@@ -75,32 +76,36 @@ npx hardhat compile
 - artifacts folder created in the src directory
 - Open new terminal and run cd app
 - Run
+
   ```sh
   npx hardhat node
   ```
 
-````
   - Local blockchain i.e. http://127.0.0.1:8545/
+
 - Switch MetaMask to LocalHost 8545 & import account using local node PK
 - ![MetaMask-Hardhat](https://user-images.githubusercontent.com/96752508/168085825-7963931a-867a-4fc7-99d9-0afdbc7fdd9d.png)
 - Leave node terminal running and switch back to the original terminal
 - Go to scripts and change original file name to deploy.js
 - Run
   ```sh
-npx hardhat run scripts/deploy.js --network localhost
+  npx hardhat run scripts/deploy.js --network localhost
+  ```
+
 ````
 
 - This deploys contract. To verify, switch back to the node terminal and check consol log or check MetaMask account, which should have a reduced amount of eth
 - Example on how to run test script to check contract test/functions
   ```sh
   npx hardhat test
+````
 
 ````
 - Update app.js
   - Open new terminal and run cd dapp/
   ```sh
 npm run start
-````
+```
 
     - Simple UI to get the data and update the data
 
@@ -130,13 +135,11 @@ npx hardhat node
   ```sh
   npx hardhat run --network localhost scripts/deploy.js
   ```
-
-````
 - Always run
 
 ```sh
  npx hardhat compile
-````
+```
 
 - after making a change to the contract (best practice)
 - Then run
@@ -163,10 +166,10 @@ npx hardhat run --network localhost scripts/deploy.js
 Project is created with:
 
 - Solidity Version: 0.8.0
-- Truffle Version: 1.5.1
-- Ganache-CLI Version: 6.12.2
-- Mocha Version: 9.1.2
-- Web3 Version: 1.6.0
+- Ethereum-Waffle Version: 3.4.4
+- Ethers Version: 5.6.5
+- Chai Version: 4.3.6
+- Hardhat Version: 2.9.4
 
 ## To Do List
 
@@ -177,3 +180,4 @@ Project is created with:
 ```
 
 ```
+````
