@@ -81,8 +81,6 @@ npx create-react-app dapp
   npx hardhat node
   ```
 
-
-
 - Local blockchain i.e. http://127.0.0.1:8545/
 
 - Switch MetaMask to LocalHost 8545 & import account using local node PK
@@ -97,19 +95,17 @@ npx create-react-app dapp
 
 - This deploys contract. To verify, switch back to the node terminal and check consol log or check MetaMask account, which should have a reduced amount of eth
 - Example on how to run test script to check contract test/functions
+
   ```
   npx hardhat test
   ```
 
-
-
 - Update app.js
   - Open new terminal and run cd dapp/
-  ```
+
+```
 npm run start
 ```
-
-    - Simple UI to get the data and update the data
 
 - Inside the hardhat.config.js file, add Rinkeby network block of code
   - Include Infura URL and test MetaMask PK
@@ -178,4 +174,3 @@ Project is created with:
 - Create UI
 - Ability for user to connect wallet
 - Ability for user to mint an NFT
-
