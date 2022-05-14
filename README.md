@@ -72,10 +72,13 @@ This project was built from the mentorship by Firebug509.
   ts/deploy.js
 - Always run npx hardhat compile after making a change to the contract (best practice) - Then run npx hardhat test - Finally, run npx hardhat run --network localhost scrip
   ts/deploy.js
-- Working on manager-test.js - ```sh
-  node index.js
+- Working on manager-test.js
+
+```sh
+ node index.js
 
 ```
+
     - Run npx hardhat test
 
 ## Technologies
@@ -93,4 +96,7 @@ Project is created with:
 - Create UI
 - Ability for user to connect wallet
 - Ability for user to mint an NFT
+
+```
+
 ```
