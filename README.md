@@ -25,32 +25,31 @@ This project was built from the mentorship by Firebug509.
 - Create dapp-env folder
 - Check that node.js installed
   - Run
-    ```sh
+    ```
     node -v
     ```
 
-```sh
+```
 npx create-react-app dapp
 ```
 
 - If you run into issues about the verison being behind, run
 
-  ```sh
+  ```
   npm uninstall -g create-react-app && npm i -g npm@latest && npm cache clean -f
   ```
 
 - Run
-  ```sh
+
+  ```
   cd dapp
   ```
 
-````
-
 - Run
-  ```sh
+
+  ```
   npm install ethers hardhat @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers
   ```
-
 
 - npx hardhat
   - Enter all default settings
@@ -69,41 +68,44 @@ npx create-react-app dapp
     },
     },
 - Run
-  ```sh
-npx hardhat compile
-````
+
+  ```
+  npx hardhat compile
+  ```
 
 - artifacts folder created in the src directory
 - Open new terminal and run cd app
 - Run
 
-  ```sh
+  ```
   npx hardhat node
   ```
 
-  - Local blockchain i.e. http://127.0.0.1:8545/
+
+
+- Local blockchain i.e. http://127.0.0.1:8545/
 
 - Switch MetaMask to LocalHost 8545 & import account using local node PK
 - ![MetaMask-Hardhat](https://user-images.githubusercontent.com/96752508/168085825-7963931a-867a-4fc7-99d9-0afdbc7fdd9d.png)
 - Leave node terminal running and switch back to the original terminal
 - Go to scripts and change original file name to deploy.js
 - Run
-  ```sh
+
+  ```
   npx hardhat run scripts/deploy.js --network localhost
   ```
 
-````
-
 - This deploys contract. To verify, switch back to the node terminal and check consol log or check MetaMask account, which should have a reduced amount of eth
 - Example on how to run test script to check contract test/functions
-  ```sh
+  ```
   npx hardhat test
-````
+  ```
 
-````
+
+
 - Update app.js
   - Open new terminal and run cd dapp/
-  ```sh
+  ```
 npm run start
 ```
 
@@ -113,51 +115,51 @@ npm run start
   - Include Infura URL and test MetaMask PK
 - Run
 
-```sh
+```
 npx hardhat run scripts/deploy.js --network rinkeby
 ```
 
 - Part 1 New Terminal
 - Run
 
-```sh
+```
  npx hardhat clean
 ```
 
 - Run
 
-```sh
+```
 npx hardhat node
 ```
 
 - New Terminal
 - Run
-  ```sh
+  ```
   npx hardhat run --network localhost scripts/deploy.js
   ```
 - Always run
 
-```sh
+```
  npx hardhat compile
 ```
 
 - after making a change to the contract (best practice)
 - Then run
 
-```sh
+```
 npx hardhat test
 ```
 
 - Finally, run
 
-```sh
+```
 npx hardhat run --network localhost scripts/deploy.js
 ```
 
 - Working on manager-test.js
 - Run
 
-```sh
+```
  npx hardhat test
 ```
 
@@ -177,7 +179,3 @@ Project is created with:
 - Ability for user to connect wallet
 - Ability for user to mint an NFT
 
-```
-
-```
-````
