@@ -8,6 +8,11 @@ function App() {
   const [contract, setContract] = useState(null);
   const [tickets, setTickets] = useState([]);
 
+  const getTickets = async() => {
+    let res = await contract.getTickets();
+    console.log(res);
+    setTickets(res);
+  }
   const initConnection = async () => {
     if (typeof window.ethereum !== "undefined") {
       //Bring popup for MetaMask
@@ -31,7 +36,6 @@ function App() {
   useEffect(() => {
     initConnection();
   }, []);
-  console.log(contract);
-  return<div>{account}</div>;
+  return<div><button onClick={getTickets}>Load data</button></div>;
 }
 export default App;
