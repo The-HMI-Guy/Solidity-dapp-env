@@ -32,7 +32,6 @@ function App() {
     initConnection();
   }, []);
   console.log(contract);
-  return;
-  <div>{account}</div>;
+  return<div>{account}</div>;
 }
 export default App;
