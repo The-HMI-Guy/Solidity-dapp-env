@@ -13,6 +13,11 @@ function App() {
     console.log(res);
     setTickets(res);
   }
+  const createTicket = async (_name) => {
+    let res = await contract.createTicket(_name);
+    await res.wait();
+    getTickets();
+  }
   const initConnection = async () => {
     if (typeof window.ethereum !== "undefined") {
       //Bring popup for MetaMask
@@ -36,6 +41,10 @@ function App() {
   useEffect(() => {
     initConnection();
   }, []);
-  return<div><button onClick={getTickets}>Load data</button></div>;
+  return(
+  <div>
+    <button onClick={() => createTicket("Test")}>Add ticket</button>
+  <button onClick={getTickets}>Load data</button></div>
+);
 }
 export default App;
