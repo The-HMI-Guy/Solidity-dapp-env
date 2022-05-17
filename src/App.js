@@ -25,7 +25,7 @@ function App() {
   };
   const renameTicket = async (_index) => {
     let newName = prompt("Please enter new ticket name", "");
-    const transaction = await contract.updateTicketStatus(_index, newName);
+    const transaction = await contract.updateTicketName(_index, newName);
     await transaction.wait();
     getTickets();
   };
@@ -55,15 +55,16 @@ function App() {
 
   return (
     <div className="page">
-      <div className="header"></div>
-      <p>Task Manager</p>
-      {account != "" ? (
-        <p>{account.substring(0, 9)}</p>
-      ) : (
-        <button className="big_button" onClick={initConnection}>
-          Connect
-        </button>
-      )}
+      <div className="header">
+        <p>Task Manager</p>
+        {account != "" ? (
+          <p>{account.substring(0, 9)}</p>
+        ) : (
+          <button className="big_button" onClick={initConnection}>
+            Connect
+          </button>
+        )}
+      </div>
       <div className="input_section">
         <div>
           <button className="big_button" onClick={() => createTicket(name)}>
@@ -106,7 +107,7 @@ function App() {
                       Done
                     </button>
                     <button
-                      lassName="small_button"
+                      className="small_button"
                       style={{ backgroundColor: "lightGrey" }}
                       onClick={() => renameTicket(ticket.id)}
                     >
@@ -130,7 +131,7 @@ function App() {
                   <div className="main_ticket_button_section">
                     <button
                       className="small_button"
-                      style={{ backgroundColor: "lightBlue" }}
+                      style={{ backgroundColor: "lightPink" }}
                       onClick={() => updateTicketStatus(ticket.id, 0)}
                     >
                       Todo
@@ -143,7 +144,7 @@ function App() {
                       Done
                     </button>
                     <button
-                      lassName="small_button"
+                      className="small_button"
                       style={{ backgroundColor: "lightGrey" }}
                       onClick={() => renameTicket(ticket.id)}
                     >
@@ -167,20 +168,20 @@ function App() {
                   <div className="main_ticket_button_section">
                     <button
                       className="small_button"
-                      style={{ backgroundColor: "lightBlue" }}
+                      style={{ backgroundColor: "lightPink" }}
                       onClick={() => updateTicketStatus(ticket.id, 0)}
                     >
-                      Busy
+                      Todo
                     </button>
                     <button
                       className="small_button"
-                      style={{ backgroundColor: "lightGreen" }}
+                      style={{ backgroundColor: "lightBlue" }}
                       onClick={() => updateTicketStatus(ticket.id, 1)}
                     >
                       Busy
                     </button>
                     <button
-                      lassName="small_button"
+                      className="small_button"
                       style={{ backgroundColor: "lightGrey" }}
                       onClick={() => renameTicket(ticket.id)}
                     >
