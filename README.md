@@ -12,13 +12,11 @@
 
 ## General info
 
-This project was built from the mentorship by Firebug509.
+This project was built from Hashlip's Youtube series.
 
 ## Features
 
-- UI for minting
-- Ability for a user to connect wallet
-- Ability for a user to mint an NFT
+- Simple UI for creating, assigning, and renaming a todo ticket.
 
 ## Setup
 
@@ -163,6 +161,7 @@ npx hardhat run --network localhost scripts/deploy.js
 
 Project is created with:
 
+- Node Version: 14.17.3
 - Solidity Version: 0.8.0
 - Ethereum-Waffle Version: 3.4.4
 - Ethers Version: 5.6.5
@@ -171,6 +170,4 @@ Project is created with:
 
 ## To Do List
 
-- Create UI
-- Ability for user to connect wallet
-- Ability for user to mint an NFT
+- N/A - Project completed
